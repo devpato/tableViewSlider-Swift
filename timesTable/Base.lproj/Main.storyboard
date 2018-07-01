@@ -21,8 +21,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="H6I-kA-v37">
                                 <rect key="frame" x="3" y="353" width="445" height="30"/>
                             </stackView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="SRY-rx-Vrk">
-                                <rect key="frame" x="-2" y="29" width="418" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0050000000000000001" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="SRY-rx-Vrk">
+                                <rect key="frame" x="7" y="29" width="418" height="31"/>
                                 <connections>
                                     <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="LOM-oy-6wF"/>
                                 </connections>
@@ -50,10 +50,12 @@
                         <constraints>
                             <constraint firstItem="H6I-kA-v37" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1C4-8N-CMh"/>
                             <constraint firstItem="SRY-rx-Vrk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3C4-SU-a7o"/>
+                            <constraint firstItem="SRY-rx-Vrk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="9" id="99Y-Aw-gsD"/>
                             <constraint firstItem="SRY-rx-Vrk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HDv-h5-QKO"/>
                             <constraint firstItem="jnQ-qW-amH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="JAZ-U0-ndr"/>
                             <constraint firstItem="jnQ-qW-amH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Pr5-EB-nTx"/>
                             <constraint firstItem="jnQ-qW-amH" firstAttribute="top" secondItem="SRY-rx-Vrk" secondAttribute="bottom" constant="8" id="RD0-W6-t05"/>
+                            <constraint firstItem="SRY-rx-Vrk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="9" id="aU7-tQ-a9p"/>
                             <constraint firstItem="jnQ-qW-amH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="g8o-KM-nmM"/>
                             <constraint firstItem="SRY-rx-Vrk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="9" id="nl1-ej-Rdi"/>
                         </constraints>
@@ -61,6 +63,7 @@
                     </view>
                     <connections>
                         <outlet property="slider" destination="SRY-rx-Vrk" id="zHq-TP-xdN"/>
+                        <outlet property="table" destination="jnQ-qW-amH" id="Nse-Pm-W65"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
