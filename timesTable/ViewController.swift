@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet weak var table: UITableView!
     
     @IBOutlet weak var slider: UISlider!
     override func viewDidLoad() {
@@ -23,6 +25,17 @@ class ViewController: UIViewController {
 
     @IBAction func sliderChanged(_ sender: Any) {
         print(slider.value)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
+        
+        cell.textLabel?.text = String(slider.value)
+        return cell
     }
     
    

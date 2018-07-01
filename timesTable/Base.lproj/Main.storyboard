@@ -37,6 +37,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="MWx-va-XUn"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="4bZ-Bh-1j7"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -52,6 +56,7 @@
                     </view>
                     <connections>
                         <outlet property="slider" destination="SRY-rx-Vrk" id="zHq-TP-xdN"/>
+                        <outlet property="table" destination="BhB-YU-MMa" id="I34-Qb-pNL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
